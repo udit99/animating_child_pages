@@ -7,15 +7,23 @@
         </transition>
       </div>
 </template>
+<script>
+export default {
+  transition: {
+    name: 'jade',
+    mode: 'out-in'
+  }
+}
+</script>
 <style scoped>
 .jade-enter-active {
-  transition: all .3s ease;
+  transition: all 1000ms ease;
 }
 .jade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 1000ms cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .jade-enter, .jade-leave-to
-/* .slide-jade-leave-active below version 2.1.8 */ {
+{
   transform: translateX(10px);
   opacity: 0;
 }
