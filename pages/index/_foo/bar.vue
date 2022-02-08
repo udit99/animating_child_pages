@@ -1,3 +1,19 @@
 <template>
-  <div>I am the grandchild and I animated correctly. Help me figure out why my parent didnt animate right. <div><a href="/"> Go back to the the top</a></div></div>
+  <div>
+    <h1>Bar</h1>
+    <NuxtLink to="/">Go to Parent</NuxtLink>
+    <transition>
+      <nuxt-child />
+    </transition>
+  </div>
 </template>
+
+<script>
+export default {
+  transition: {
+    name: "jade",
+    mode: "out-in",
+  },
+  name: "GrandchildPage",
+};
+</script>
